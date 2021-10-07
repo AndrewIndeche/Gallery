@@ -42,7 +42,7 @@ class Image(models.Model):
     '''
     model for Images
     '''
-    image = models.ImageField(upload_to='images/')
+    image_link = models.ImageField(upload_to='images/',default='404.jpg')
     name = models.CharField(max_length=60)
     description = models.TextField()
     author = models.CharField(max_length=40, default='admin')
@@ -85,13 +85,6 @@ class Image(models.Model):
     def delete_Image(self):
         self.delete()
 
-    def update_image(self, new_url):
-        '''
-        method to update an image's link
-        '''
-        try:
-            self.image_link = new_url
-            self.save()
-            return self
-        except self.DoesNotExist:
-            print('Image you specified does not exist')
+    @classmethod
+    def update_image(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
