@@ -42,3 +42,39 @@ class LocationTestClass(TestCase):
         self.location.delete_location()
         location = Location.objects.all()
         self.assertTrue(len(location) == 0)
+
+class ImageTestClass(TestCase):
+    '''
+    test method to create Image instances called before all tests
+    '''
+    def setUp(self):
+        self.category = Category(name='testing')
+        self.category.save_category()
+
+        self.location = Location(name='Nairobi')
+        self.location.save_location()
+
+        self.image_test = Image(id=1, name='Image name', description='lorem ipsum', category=self.category, location=self.location)
+        self.image_test.save_image()
+
+
+    def tearDown(self):
+        Image.objects.all().delete()
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+
+    def test_delete_Image(self):
+        self.image_test.delete_Image()
+        image = Image.objects.all()
+        self.assertTrue(len(image) == 0)
+
+    def test_update_image(self):
+        self.image_test.save_image()
+        self.image_test.update_image(self.image_test.id)
+        changed_img = Image.objects.filter(image='photos/test.jpg')
+        self.assertTrue(len(changed_img) > 0)
+
+    def test_get_image_by_id(self):
+        found_image = self.image_test.get_image_by_id(self.image_test.id)
+        image = Image.objects.filter(id=self.image_test.id)
+        self.assertTrue(found_image, image)

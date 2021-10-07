@@ -42,6 +42,7 @@ class Image(models.Model):
     '''
     model for Images
     '''
+    image = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=60)
     description = models.TextField()
     author = models.CharField(max_length=40, default='admin')
@@ -58,23 +59,23 @@ class Image(models.Model):
         '''
         method to retrieve all images
         '''
-        pics = Images.objects.all()
+        pics = Image.objects.all()
         return pics
 
     @classmethod
     def get_image_by_id(cls, id):
         '''
-        method to retrieve images by unique id
+        method to retrieve image by unique id
         '''
-        retrieved = Images.objects.get(id = id)
+        retrieved = Image.objects.get(id = id)
         return retrieved
 
     @classmethod
     def search_image(cls, cat):
         '''
-        method to search images by category
+        method to search image by category
         '''
-        retrieved = cls.objects.filter(category__name__contains=cat) #images assoc w/ this cat
+        retrieved = cls.objects.filter(category__name__contains=cat) #image assoc w/ this cat
         return retrieved #list of instances
 
 
@@ -83,6 +84,7 @@ class Image(models.Model):
 
     def delete_Image(self):
         self.delete()
+
     def update_image(self, new_url):
         '''
         method to update an image's link
