@@ -4,9 +4,4 @@ body {
   font-family: 'Rock Salt', cursive;
 }
 
-{
-     background: url("/static/images/bg.jpeg") 50% 0 no-repeat fixed;
-     color: white;
-     height: 650px;
-     padding: 100px 0 0 0;
-     }
+background-image: url('{% static 'bg.jpeg' %}');
