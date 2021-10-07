@@ -1,51 +1,53 @@
-   <body>
-    <h1>Picture-App<h1>
-     <h2>Project description</h2>
-  <p> The project folder contains a Django App that displays a personal photo gallery of favorite pictures</p>
-     </div>
-     </div>
-         </ul>
-    <h1>Languages and Platforms Used</h1>
-    <ul>
-    <li>1.Python CLI </li>
-    <li>2.Django</li>
-    <li>3.Bookstrap for styling the index page </li>
-    </div>
-    </div>
-    <h1> Authors</h1>
-    <p>Andrew Indeche</p>
-    <p>Contact indecheandrew@gmail.com</p>
-    </div>
-    </div>
-    <h1>Project Set-up Instructions</h1>
-     SetUp / Installation Requirements
-Prerequisites
-python3.8
-virtualenv
-git clone ability
+# Gallery App
 
-SET-UP INSTRUCTIONS:
-1.Set-up from git-hub
-  $ git clone https://github.com/AndrewIndeche/Gallery.git
-  $ cd Gallery
-2.Create a virtual environment
+The project folder contains a Django App that displays a personal photo gallery of favorite pictures.The App enables users to upload and share photos.
 
-  $ python3.8 -m venv --without-pip virtual
-  $ source virtual/bin/env
-  
-3.Installing Dependencies
+## Getting Started
 
-  pip install -r requirements.txt 
+To get a copy of the project up and running on your local machine for development and testing purposes. 
+-clone the project from Github on terminal
+-Create a virtual environment for your folder
+-See deployment for notes on how to deploy the project on a live system.
 
-4.Set up Database
+### Prerequisites
 
-(a)python manage.py makemigrations
-(b)python manage.py migrate 
+Use the requirements.txt files to download pre-requisite packages needed to run the project
 
-5.Run app from server
-python manage.py runserver 
+(virtual) $ pip install -r requirements.txt
 
-</div>
- </div>
-Copyright (c) 2021 Andrew Indeche
-By using and/or copying this project, or the license document from which this statement is linked, you (the licensee) agree that you have read, understood, and will comply with conditions of use.
+### Installing
+
+Install as per the env.example files replacing the username and other variables in your env
+
+Say what the step will be
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Use (virtual) $ python3 manage.py test picha command to run tests
+
+### And coding style tests
+
+The tests will test the Image, Location and Category classes for errors
+
+## Deployment
+
+Deployment has been done on Heroku using the requirements.txt packages
+
+## Built With
+
+* Django 3.2.8
+* Python 3.8
+* Postgresql
+* See requirements.txt for all packages.
+
+## Authors
+
+* **Andrew Indeche** - *Final work* - [Gallery](https://github.com/Gallery)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
