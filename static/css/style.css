@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-
 .body {
   font-family: 'Rock Salt', cursive;
   background-image: url('{% static 'bg.jpeg' %}');
 }
-.center{ .jumbotron {
+.center{
   min-width: 585px;
   margin: 10px auto;
   display: flex;
   justify-content: center;
   margin: 10px 10px 10px 10px;
   border: 0.08em solid black;
+}
+.h2{
+font-family: 'Rock Salt', cursive;
+}
+.jumbotron{
+  padding-top: 25em;
+  background: none
 }
