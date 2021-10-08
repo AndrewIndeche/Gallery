@@ -85,6 +85,13 @@ class Image(models.Model):
     def delete_Image(self):
         self.delete()
 
-    @classmethod
-    def update_image(cls, id, value):
-        cls.objects.filter(id=id).update(image=value)
+    def update_image(self, new_url):
+        '''
+        method to update an image's link
+        '''
+        try:
+            self.image_link = new_url
+            self.save()
+            return self
+        except self.DoesNotExist:
+            print('Image you specified does not exist')
