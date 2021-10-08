@@ -1,2 +1,10 @@
-{% include 'navbar.html' %}
-<h1> MY PIC GALLERY</h1>
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+<h2> MY STOCK PHOTOGRAPHY COLLECTION</h2>
+<div class="container-fluid">
+  <div class="jumbotron jumbotron-fluid">
+  <h2>WELCOME TO 'MY PIC' GALLERY</h2>
+<button type="button" class="btn btn-secondary" href="/gallery/">Explore</button>
+</div>
+</div>
+{% endblock %}
