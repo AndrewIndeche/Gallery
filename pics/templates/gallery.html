@@ -1,4 +1,11 @@
+{% extends 'base.html' %}
+
 {% block content %}
-<p>nyamaza</p>
 {{block.super}}
-{% endblock %}
+<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+{% endblock %}{{block.super}}
