@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
+{% load static %}
 {% block content %}
-{{block.super}}
 <div class="sidenav bg-transparent">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#kenya">KENYA</a>
@@ -8,37 +8,41 @@
   <a href="#canada">CANADA</a>
   <a href="#alaska">ALASKA</a>
 </div>
+<div class="container-fluid boded" id="b">
+<div class="container">
+<div class="row">
 <div class="card-columns">
-  {% for image in images %}
-  <div class="card" data-toggle="modal" data-target="#{{image.id}}">
-    <img src="{{image.image_link.url}}" alt="{{image.name}}" class="card-img">
-      <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
+  {% for item in pictures %}
+  <div class="card" data-toggle="modal" data-target="#{{item.id}}">
+    <img src="{{item.image_link.url}}" alt="{{item.name}}" class="card-img">
+      <div class="modal fade " id="{{item.id}}" tabindex="-1" role="dialog"
          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content modalcard">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageheader">{{image.name}}</h5>
+                    <h5 class="modal-title" id="imageheader">{{item.name}}</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                       <button>
                    </div>
                 <div class="modal-body">
-                    <img src="{{image.image_link.url}}" alt="{{image.name}}" class="img-fluid">
-                    <p class="imgdesc text-center">{{image.description}}</p>
-                      <span class="btn btn-sm btn-outline-success">{{image.category}}</span> <a
-                      href="/location/{{image.location}}" class="btn btn-sm btn-outline-info">{{image.location}}</a>
+                    <img src="{{item.image_link.url}}" alt="{{item.name}}" class="img-fluid">
+                    <p class="imgdesc text-center">{{item.description}}</p>
+                      <span class="btn btn-sm btn-outline-success">{{item.category}}</span> <a
+                      href="/location/{{item.location}}" class="btn btn-sm btn-outline-info">{{item.location}}</a>
                 </div>
                 <div class="modal-footer">
                     <input class="form-control input-lg" type="text"
-                    value="{{image.image_link.url}}" id="{{image.id}}.url">
-                    <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
+                    value="{{item.image_link.url}}" id="{{item.id}}image_link.url">
+                    <button class="btn btn-success btn-sm" onclick="copyLink('{{item.id}}image_link.url')">Copy</button>
                     <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
                     </button>
                 </div>
             </div>
         </div>
-    </div>
-  </div>
+        </div>
    {%endfor%}
-
-{% endblock %}{{block.super}}
+ </div>
+ </div>
+</div>
+{% endblock %}

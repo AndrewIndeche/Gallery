@@ -50,7 +50,7 @@ class Image(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
-        return self.title
+        return self.name
     def filter_by_location(cls, location):
         image_location = Image.objects.filter(location__name=location).all()
         return image_location

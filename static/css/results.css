@@ -1,10 +1,6 @@
 @import url('http://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 body{
-background-attachment:fixed;
-background-repeat:no-repeat;
-background-position:center;
-background-size:cover;
 font-family: 'Rock Salt', cursive;
 color:white;
 background-color:#000;
@@ -12,63 +8,34 @@ background-color:#000;
 h2{
   font-weight:bolder;
 }
-.center{
-  min-width: 585px;
-  margin: 10px auto;
-  display: flex;
-  justify-content: center;
-  margin: 10px 10px 10px 10px;
-  border: 0.08em solid black;
-}
 .body{
 font-family: 'Rock Salt', cursive;
 }
-.jumbotron{
-  padding-top: 22em;
-  background: none
+.modalcard{
+background-color:rgba(10,10,10,0.8);
+color:white;
+padding:3%;
+border:none;
 }
-/* The sidebar menu */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 0; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #000; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px;
+.card-img {
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+.cat{
+float:center;
+background:gray;
+padding:4px;
+border-radius:6px;
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+.boded{
+padding-top:2%;
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
 }
