@@ -2,9 +2,13 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg">
 <div id="mySidenav" class="sidenav">
 <div class="col-sm-4 col-md-4 navbar-left">
+  <form class="form-inline my-2 my-md-0"  action="/search" role="search">
+    <input class="form-control mr-sm-2" type="search" placeholder="Category Search" name="imagesearch" aria-label="Search">
+    <button class="btn btn-info btn-md my-2 my-sm-0" type="submit">Search</button>
+  </form>
 <div class="sidenav bg-transparent">
   <a href="#kenya">KENYA</a>
   <a href="#ethiopia">ETHIOPIA</a>
@@ -34,8 +38,8 @@
                 <div class="modal-body">
                     <img src="{{item.image_link.url}}" alt="{{item.name}}" class="img-fluid">
                     <p class="imgdesc text-center">{{item.description}}</p>
-                      <span class="btn btn-sm btn-outline-success">{{item.category}}</span> <a
-                      href="/location/{{item.location}}" class="btn btn-sm btn-outline-info">{{item.location}}</a>
+                      <span class="btn btn-sm btn-outline-success">{{item.category}}</span> <b
+                      href="/location/{{item.location}}" class="btn btn-sm btn-outline-info">{{item.location}}</b>
                 </div>
                 <div class="modal-footer">
                     <input class="form-control input-lg" type="text"

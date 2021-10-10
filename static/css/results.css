@@ -10,6 +10,7 @@ h2{
 }
 .body{
 font-family: 'Rock Salt', cursive;
+color:white;
 }
 .modalcard{
 background-color:rgba(10,10,10,0.8);
@@ -38,4 +39,12 @@ padding-top:2%;
 background-repeat:no-repeat;
 background-position:center;
 background-size:cover;
+}
+.navbar a{
+  color:white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:1px 1px 32px;
+  padding-left: 2%;
 }
