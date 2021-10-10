@@ -1,0 +1,20 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Pic gallery </title>
+    {% block styles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
+    {% endblock %}
+    </head>
+<body>
+    {% block navbar %}
+    {% include 'navbar.html' %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

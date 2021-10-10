@@ -1,13 +1,14 @@
 {% extends 'base.html' %}{% load static %}
 {% block content %}
-<h2 class ="text-center"><strong>MY STOCK PHOTOGRAPHY COLLECTION</strong></h2>
+<h2 class ="text-center">MY STOCK PHOTOGRAPHY COLLECTION</h2>
 <div class="container-fluid">
 <div class="jumbotron jumbotron-fluid">
 <h1 class ="text-center"><strong>WELCOME TO 'MY PIC' GALLERY</strong></h1>
 <br><br><br><br>
 <div class="col-md-12 text-center">
-<button type="button" class="btn btn-secondary btn lg" href="/gallery/">Explore</button>
-</div>
+<a href="{% url 'gallery'%}" class="col-md-12 text-center">
+<button type="button" style="height:100px; width:200px; class="btn btn-secondary btn lg"><strong>Explore</strong></button>
+</a>
 </div>
 </div>
 {% endblock %}
