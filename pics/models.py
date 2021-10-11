@@ -75,7 +75,7 @@ class Image(models.Model):
         '''
         method to search image by category
         '''
-        retrieved = cls.objects.filter(category__name__contains=cat) #image assoc w/ this cat
+        retrieved = cls.objects.filter(category__name__contains=cat) 
         return retrieved #list of instances
 
 

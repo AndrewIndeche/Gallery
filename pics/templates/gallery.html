@@ -4,19 +4,18 @@
 <nav class="sidenav">
 <div id="mySidenav" class="sidenav col-sm-4 col-md-4 navbar-left">
 <div class">
-  <form class="form-inline my-2 my-md-0"  action="/search" role="search">
-    <input class="form-control mr-sm-0" type="search" placeholder="Category Search" name="imagesearch" aria-label="Search">
+  <form class="form-inline my-2 my-md-0"  action="{% url 'search' %}" role="search">
+    <input class="form-control mr-sm-0" type="search" placeholder="Search by category" name="imagesearch" aria-label="Search">
     <button class="btn btn-info btn-md my-2 my-sm-0" type="submit">Search</button>
   </form>
   <br>
   <br>
 <div class="sidenav bg-transparent">
-  <a href="#kenya">KENYA</a>
-  <a href="#ethiopia">ETHIOPIA</a>
-  <a href="#canada">CANADA</a>
-  <a href="#alaska">ALASKA</a>
-  <a href="#tanzania">TANZANIA</a>
-    </div>
+  <a href="/KENYA">KENYA</a>
+  <a href="/ETHIOPIA">ETHIOPIA</a>
+  <a href="/CANADA">CANADA</a>
+  <a href="/ALASKA">ALASKA</a>
+      </div>
    </div>
   </div>
   </nav
