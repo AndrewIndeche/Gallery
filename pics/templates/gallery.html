@@ -11,10 +11,9 @@
   <br>
   <br>
 <div class="sidenav bg-transparent">
-  <a href="/KENYA">KENYA</a>
-  <a href="/ETHIOPIA">ETHIOPIA</a>
-  <a href="/CANADA">CANADA</a>
-  <a href="/ALASKA">ALASKA</a>
+  {% for item in locations %}
+  <a href="/location/{{item.name}}">{{item.name}}</a>
+  {% endfor %}
       </div>
    </div>
   </div>

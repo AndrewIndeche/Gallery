@@ -1,16 +1,21 @@
 {% extends 'layout.html' %}
 {% block content %}
+<div class="container">
 <div class="block">
-    <div class="row">
+<div class="row">
         {% if results %}
-        <h2> Found {{results|length }} items </h2>
+        <h2> Found {{results|length }} searches for location </h2>
         {% else %}
         <h2> Found 0 results </h2>
         {% endif %}
     </div>
-    <div class="row">
-        <div class="gallery">
+  </div>
+     <div class="row">
+         <div class="gallery">
+             <div class="card-columns">
+             <div class="row">
             {% if results %} {% for item in results %}
+            <div class="col-12">
             <div class="card" data-toggle="modal" data-target="#{{item.id}}">
               <img src="{{item.image_link.url}}" alt="{{item.name}}" class="card-img">
                 <div class="modal fade " id="{{item.id}}" tabindex="-1" role="dialog"
@@ -26,21 +31,24 @@
                           <div class="modal-body">
                               <img src="{{item.image_link.url}}" alt="{{item.name}}" class="img-fluid">
                               <p class="imgdesc text-center">{{item.description}}</p>
-                                <span class="btn btn-sm btn-outline-success">{{item.category}}</span> <a
-                                href="/location/{{item.location}}" class="btn btn-sm btn-outline-info">{{item.location}}</a>
+                                <span class="btn btn-sm btn-outline-success">{{item.category}}</span> <b
+                                href="/location/{{item.location}}" class="btn btn-sm btn-outline-info">{{item.location}}</b>
                           </div>
                           <div class="modal-footer">
                               <input class="form-control input-lg" type="text"
                               value="{{item.image_link.url}}" id="{{item.id}}image_link.url">
                               <button class="btn btn-success btn-sm" onclick="copyLink('{{item.id}}image_link.url')">Copy</button>
                               <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
-                              </button>
+                                </button>
+                            </div>
                           </div>
+                        </div>
                       </div>
+                    </div>
                   </div>
-                  </div>
-              {%endfor%}
-             </div>
-           {%endif%}
-
-{% endblock %}
+              {%endfor%}{%endif%}
+            </div>
+           </div>
+          </div>
+       </div>
+ {% endblock %}

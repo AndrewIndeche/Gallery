@@ -51,9 +51,11 @@ class Image(models.Model):
 
     def __str__(self):
         return self.name
+    @classmethod
     def filter_by_location(cls, location):
         image_location = Image.objects.filter(location__name=location).all()
         return image_location
+
     @classmethod
     def get_all(cls):
         '''
@@ -75,7 +77,7 @@ class Image(models.Model):
         '''
         method to search image by category
         '''
-        retrieved = cls.objects.filter(category__name__contains=cat) 
+        retrieved = cls.objects.filter(category__name__contains=cat)
         return retrieved #list of instances
 
 

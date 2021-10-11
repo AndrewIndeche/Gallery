@@ -8,5 +8,5 @@ urlpatterns=[
     url(r'^$',views.index,name = 'index'),
     url('^gallery/', views.gallery, name='gallery'),
     url('^search/', views.search, name='search'),
-    url('^location/(?P<locale>\w+)/', views.location, name='location'),
+    url('^location/(?P<location>\w+)/', views.image_location, name='location'),
 ]

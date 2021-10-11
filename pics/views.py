@@ -16,13 +16,13 @@ def search(request):
         category = request.GET.get('imagesearch')
         searched_images  = Image.search_image(category)
         message = f'{category}'
-    
+        print(searched_images)
         return render(request, 'search.html', {'message':message, 'results':searched_images})
     else:
         message = 'Please Search for an image category'
         return render(request, 'search.html', {'message':message})
 
-def location(request,locale):
-    picture = Image.filter_by_location(locale)
+def image_location(request,location):
+    images = Image.filter_by_location(location)
     print(images)
     return render(request, 'location.html', {'results':images})
