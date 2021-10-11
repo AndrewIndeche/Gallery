@@ -1,45 +1,26 @@
 {% extends 'layout.html' %}
 {% block content %}
 <div class="container">
-{% if pictures %}
+<div class="block">
+<div class="row">
+{% if results %}
 <h2 class="text-center" id="found">Found {{ pictures|length }} images in '{{message}}' category</h2>
 {% else %}
 <h2 class="text-center" id="foundnon"> Found 0 images for your search {{message}}</h2>
 {% endif %}
-{% if pictures %}
-<div class="card-columns">
-  {% for item in pictures %}
-  <div class="card" data-toggle="modal" data-target="#{{item.id}}">
-    <img src="{{item.image_link.url}}" alt="{{item.name}}" class="card-img">
-      <div class="modal fade " id="{{item.id}}" tabindex="-1" role="dialog"
-         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-            <div class="modal-content modalcard">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageheader">{{item.name}}</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                      <button>
-                   </div>
-                <div class="modal-body">
-                    <img src="{{item.image_link.url}}" alt="{{item.name}}" class="img-fluid">
-                    <p class="imgdesc text-center">{{item.description}}</p>
-                      <span class="btn btn-sm btn-outline-success">{{item.category}}</span> <a
-                      href="/location/{{item.location}}" class="btn btn-sm btn-outline-info">{{item.location}}</a>
-                </div>
-                <div class="modal-footer">
-                    <input class="form-control input-lg" type="text"
-                    value="{{item.image_link.url}}" id="{{item.id}}image_link.url">
-                    <button class="btn btn-success btn-sm" onclick="copyLink('{{item.id}}image_link.url')">Copy</button>
-                    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
-                    </button>
-                </div>
-            </div>
-        </div>
-        </div>
-    {%endfor%}
+</div>
+   <div class="row">
+       <div class="gallery">
+           {% if results %} {% for item in results %}
+           <div class="gallery-item" tabindex="0">
+               <img src="{{item.image_link.url}}" class="gallery-image" alt="">
+               <div class="gallery-item-info">
+                   <ul>
+                      </ul>
+               </div>
+           </div>
+           {% endfor %} {% endif %}
+       </div>
    </div>
- {%endif%}
- </div>
 </div>
 {% endblock %}
