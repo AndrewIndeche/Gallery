@@ -1,1 +1,1 @@
-web: gunicorn picapp.wsgi
+web: gunicorn picapp.wsgi --log-file -
