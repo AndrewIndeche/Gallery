@@ -1,0 +1,29 @@
+@import url('http://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+body{
+background-image:url(/static/images/bg.jpeg);
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+font-family: 'Rock Salt', cursive;
+color:white;
+}
+h2{
+  font-weight:bolder;
+}
+.center{
+  min-width: 585px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px 10px 10px;
+  border: 0.08em solid black;
+}
+.body{
+font-family: 'Rock Salt', cursive;
+}
+.jumbotron{
+  padding-top: 22em;
+  background: none
+}

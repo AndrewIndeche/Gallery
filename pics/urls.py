@@ -6,7 +6,7 @@ from django.conf import settings
 
 urlpatterns=[
     url(r'^$',views.index,name = 'index'),
-    url('^gallery/', views.gallery, name='gallery'),
-    url('^search/', views.search, name='search'),
-    url('^location/(?P<location>\w+)/', views.image_location, name='location'),
+    url(r'^gallery/', views.gallery, name='gallery'),
+    url(r'^search/', views.search, name='search'),
+    url(r'^location/(?P<location>\w+)/', views.image_location, name='location'),
 ]
