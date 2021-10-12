@@ -85,6 +85,7 @@ DATABASES = {
         'USER': config('USER'),
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
+        'ALLOWED_HOSTS' = '.localhost', '.herokuapp.com', '.127.0.0.1',
     }
 }
 
