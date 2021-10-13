@@ -89,8 +89,7 @@ if config('MODE')=='dev':
             'USER': config('DB_USER'),
             'PASSWORD': config('DB_PASSWORD'),
             'HOST': config('DB_HOST'),
-            'PORT': '',
-        }
+           }
     }
 else:
     DATABASES = {
