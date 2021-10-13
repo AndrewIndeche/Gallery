@@ -1,18 +1,20 @@
 @import url('http://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
-body{
-font-family: 'Rock Salt', cursive;
-color:white;
-background-color:#000;
+@font-face {
+font-family: 'Rock Salt';
+font-style: normal;
+font-weight: 400;
+src:url('./fonts/RockSalt-Regular.ttf') format('truetype');
 }
+
 h2{
   font-weight:bolder;
   text-align: center;
+  color: #f3f3f3;
 }
-.body{
+body{
 font-family: 'Rock Salt', cursive;
-color:white;
+background-color:black;
 }
 .modalcard{
 background-color:rgba(10,10,10,0.8);
