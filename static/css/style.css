@@ -1,5 +1,11 @@
 @import url('http://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
+@font-face {
+ font-family: 'Rock Salt';
+ font-weight: 400;
+ src:url('./fonts/RockSalt-Regular.ttf') format('truetype'); 
+}
+
 body{
 background-image:url(/static/images/bg.jpeg);
 background-attachment:fixed;
