@@ -1,5 +1,5 @@
 function myFunction() {
-    var copyText = document.getElementById("myInput");
+    var copyText = document.getElementById("{{item.id}}image_link.url");
 
     copyText.select();
     copyText.setSelectionRange(0, 99999);
