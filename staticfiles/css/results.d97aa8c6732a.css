@@ -1,0 +1,56 @@
+@import url('http://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+@font-face {
+font-family: 'Rock Salt';
+font-style: normal;
+font-weight: 400;
+src:url("./fonts/RockSalt-Regular.1af0b153d563.ttf") format('truetype');
+}
+
+h2{
+  font-weight:bolder;
+  text-align: center;
+  color: #f3f3f3;
+}
+body{
+font-family: 'Rock Salt', cursive;
+background-color:black;
+}
+.modalcard{
+background-color:rgba(10,10,10,0.8);
+color:white;
+padding:3%;
+border:none;
+overflow: none;
+}
+.card-img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.sidenav a{
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  padding:6px 1px 40px;
+  padding-left: 2%;
+  padding-right: 2%;
+  position:sticky;
+  padding-top: 10px;
+
+ }
+ .center {
+  display: block;
+  border:none;
+  width: 50%;
+  padding-top:5px;
+}
+.container-fluid {
+  display: flex;
+  padding-top: 10px;
+}
