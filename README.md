@@ -47,7 +47,7 @@ Deployment has been done on Heroku using the requirements.txt packages
 
 ## Authors
 
-* **Andrew Indeche** - *Final work* - [Gallery](https://github.com/Gallery)
+* **Andrew Indeche** - *Final work* 
 
 ## License
 
