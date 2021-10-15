@@ -28,7 +28,7 @@ Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
 
-Use (virtual) $ python3 manage.py test picha command to run tests
+Use (virtual) $ python3 manage.py test pics command to run tests
 
 ### And coding style tests
 
